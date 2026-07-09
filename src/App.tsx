@@ -78,11 +78,11 @@ interface NavItem {
 }
 
 const NAV: NavItem[] = [
-  { id: "accueil", file: "profil.tsx", label: "Accueil" },
-  { id: "apropos", file: "a_propos.md", label: "À propos" },
-  { id: "competences", file: "competences.json", label: "Compétences" },
-  { id: "projets", file: "projets", label: "Projets" },
-  { id: "contact", file: "contact.php", label: "Contact" },
+  { id: "accueil", file: "Accueil", label: "Accueil" },
+  { id: "apropos", file: "À propos", label: "À propos" },
+  { id: "competences", file: "Compétences", label: "Compétences" },
+  { id: "projets", file: "Projets", label: "Projets" },
+  { id: "contact", file: "Contact", label: "Contact" },
 ];
 
 interface SkillGroup {
@@ -322,30 +322,31 @@ export default function Portfolio() {
       `}</style>
 
       {/* ===== Tab bar (nav) ===== */}
-      <div className="sticky top-0 z-50 w-full border-b" style={{ backgroundColor: c.surface, borderColor: c.border }}>
-        <div className="max-w-5xl mx-auto flex items-center overflow-x-auto">
+           <div className="sticky top-0 z-50 w-full border-b" style={{ backgroundColor: c.surface, borderColor: c.border }}>
+        <div className="max-w-5xl mx-auto flex items-center">
           <div className="flex items-center gap-2 px-4 py-3 shrink-0" style={{ color: c.accent }}>
             <Terminal size={16} />
             <span className="text-sm font-semibold hidden sm:inline" style={{ fontFamily: FONTS.mono }}>
-              eric.dev
+              Fitiavana.dev
             </span>
           </div>
-          {NAV.map((n) => (
-            <button
-              key={n.id}
-              onClick={() => scrollTo(n.id)}
-              className="px-4 py-3 text-sm whitespace-nowrap border-r transition-colors"
-              style={{
-                fontFamily: FONTS.mono,
-                borderColor: c.border,
-                color: active === n.id ? c.accent : c.textMuted,
-                backgroundColor: active === n.id ? c.surfaceAlt : "transparent",
-              }}
-            >
-              {n.file}
-            </button>
-          ))}
-          <div className="flex-1" />
+          <div className="flex-1 flex items-center justify-center overflow-x-auto">
+            {NAV.map((n) => (
+              <button
+                key={n.id}
+                onClick={() => scrollTo(n.id)}
+                className="px-4 py-3 text-sm whitespace-nowrap border-r transition-colors"
+                style={{
+                  fontFamily: FONTS.mono,
+                  borderColor: c.border,
+                  color: active === n.id ? c.accent : c.textMuted,
+                  backgroundColor: active === n.id ? c.surfaceAlt : "transparent",
+                }}
+              >
+                {n.file}
+              </button>
+            ))}
+          </div>
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="mx-3 my-2 shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-md text-xs"
@@ -366,8 +367,8 @@ export default function Portfolio() {
             <span className="w-3 h-3 rounded-full" style={{ backgroundColor: c.accent2 }} />
             <span className="w-3 h-3 rounded-full" style={{ backgroundColor: c.accent }} />
             <span className="ml-3 text-xs" style={{ fontFamily: FONTS.mono, color: c.textMuted }}>
-              profil.tsx
-            </span>
+   Accueil
+</span>
           </div>
 
           <div className="grid md:grid-cols-[auto_1fr] gap-8 p-6 sm:p-10 items-center">
@@ -424,7 +425,7 @@ export default function Portfolio() {
 
       {/* ===== About ===== */}
       <section id="apropos" className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-        <SectionLabel number="01" filename="a_propos.md" c={c} />
+        <SectionLabel number="01" filename="À propos" c={c} />
         <div className="grid md:grid-cols-[1fr_1fr] gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-4" style={{ fontFamily: FONTS.display }}>
@@ -467,7 +468,7 @@ export default function Portfolio() {
 
       {/* ===== Skills ===== */}
       <section id="competences" className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-        <SectionLabel number="02" filename="competences.json" c={c} />
+       <SectionLabel number="02" filename="Compétences" c={c} />
         <h2 className="text-2xl font-bold mb-8" style={{ fontFamily: FONTS.display }}>
           Compétences
         </h2>
@@ -492,7 +493,7 @@ export default function Portfolio() {
 
       {/* ===== Projects ===== */}
       <section id="projets" className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-        <SectionLabel number="03" filename="projets/" c={c} />
+        <SectionLabel number="03" filename="Projets" c={c} />
         <div className="flex items-center justify-between mb-8 flex-wrap gap-2">
           <h2 className="text-2xl font-bold" style={{ fontFamily: FONTS.display }}>
             Projets
@@ -532,7 +533,7 @@ export default function Portfolio() {
 
       {/* ===== Contact ===== */}
       <section id="contact" className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
-        <SectionLabel number="04" filename="contact.php" c={c} />
+       <SectionLabel number="04" filename="Contact" c={c} />
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-4" style={{ fontFamily: FONTS.display }}>
