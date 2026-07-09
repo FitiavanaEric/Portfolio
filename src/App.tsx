@@ -498,12 +498,7 @@ export default function Portfolio() {
           <h2 className="text-2xl font-bold" style={{ fontFamily: FONTS.display }}>
             Projets
           </h2>
-          <span
-            className="text-xs px-2.5 py-1 rounded-md"
-            style={{ fontFamily: FONTS.mono, color: c.accent2, border: `1px solid ${c.border}` }}
-          >
-            exemples à remplacer par vos vrais projets
-          </span>
+         
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {PROJECTS.map((p) => (
@@ -550,7 +545,7 @@ export default function Portfolio() {
               </a>
               <a href="tel:+261388217211" className="flex items-center gap-3" style={{ color: c.text }}>
                 <Phone size={16} style={{ color: c.accent }} />
-                +261 82 172 11
+                +261 38 82 172 11
               </a>
               <div className="flex items-center gap-3">
                 <MapPin size={16} style={{ color: c.accent }} />

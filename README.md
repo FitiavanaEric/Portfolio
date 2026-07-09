@@ -1,4 +1,9 @@
 # Portfolio — Rakotomihaja Eric Fitiavana
+<<<<<<< HEAD
+=======
+
+'''
+>>>>>>> 88bbc37be0adc3d010bd51aa82a4338e18e49f7e
 portfolio/
 ├── index.html
 ├── package.json
@@ -16,3 +21,7 @@ portfolio/
     ├── schema.sql         (table des messages)
     └── .env.example
 
+<<<<<<< HEAD
+=======
+'''
+>>>>>>> 88bbc37be0adc3d010bd51aa82a4338e18e49f7e
