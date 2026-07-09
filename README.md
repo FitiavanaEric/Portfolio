@@ -1,9 +1,4 @@
 # Portfolio — Rakotomihaja Eric Fitiavana
-
-Portfolio personnel : **React + TypeScript + Vite + Tailwind CSS** côté frontend,
-**PHP + MySQL** côté backend pour le formulaire de contact. Mode sombre / clair inclus.
-
-```
 portfolio/
 ├── index.html
 ├── package.json
@@ -20,4 +15,4 @@ portfolio/
     ├── db.php            (connexion MySQL)
     ├── schema.sql         (table des messages)
     └── .env.example
-```
+
